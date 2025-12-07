@@ -79,7 +79,7 @@
                                             <input class= "form-control" id="address" placeholder="ที่อยู่ของคุณ">
                                     </div>
                             </div>
-                            <div class="row mb-3">
+                            <div class="row mb-3e">
                                     <label for="lastname" class="col-sm-2 offset-sm-2 col-form-label">สีที่ชอบ</label>
                             <select class="form-select form-select-sm" aria-label="Small select example">
                                 <option selected>สี</option>
