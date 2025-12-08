@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+@extends('template.default')
+@section('content')
     <head>
         <meta charset="UTF-8">
         <title>Workshop HTML</title>
@@ -29,6 +29,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox=
                     <label for="name" class="col-sm-2 offset-sm-2 col-form-label">ชื่อ</label>
                     <div class="col-sm-4">
                         <input type="text" class="form-control" id="name" placeholder="ชื่อของคุณ">
+                        
                     </div>
                 </div>
                 
@@ -131,14 +132,28 @@ background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox=
             
                     <div class="col-sm-4 offset-sm-2">
                         
-                        <button type="reset" class="btn btn-secondary">reset</button>
+                        <button type="reset" class="btn btn-light">reset</button>
                         
-                        <button type="submit" class="btn btn-primary">submit</button>
+                        <button type="button" onclick="checkValidate()" class="btn btn-success">submit</button>
                     </div>
                 </div>
-                
-                
             </form>
         
     </body>
-</html>
+    @endsection
+    @push("scripts")
+    <script>
+    
+        console.log("Hello Form HTML");
+        checkValidate() => {
+            let fname = document.getElementById('fname')
+            if(fname.value==""){
+                fname.classList.remove("is-valid")
+                fname.classList.add("is-invalid")
+            } else {
+                fname.classList.remove("is-invalid")
+                fname.classList.add("is-valid")
+            }
+        }
+        </script>
+    @endpush
