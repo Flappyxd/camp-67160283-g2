@@ -9,3 +9,6 @@ Route::get('/', function () {
 Route::get('/view2', function () {
     return view('myview2');
 });
+
+Route::get('/mycontroller', [App\Http\Controllers\Mycontroller::class, 'index']);
+Route::get('/mycontroller', [App\Http\Controllers\Mycontroller::class, 'process']);

@@ -17,7 +17,11 @@ background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox=
         </style>
     
 </head>
+
 <body>
+    <div class="container">
+         <h1>@yield('header1')</h1>
+        
     
     @yield('content')
     </div>

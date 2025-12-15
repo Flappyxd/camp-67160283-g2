@@ -192,7 +192,7 @@
             //ตัวเเปรเก็บสถานะการตรวจสอบว่าถูกต้องไหม
             let isValid = true;
 
-            // ฟังก์ชันช่วยจัดการ class (เพื่อความกระชับ)
+            // ฟังก์ชันช่วยจัดการ class
             const toggleClass = (element, condition) => {
                 if (condition) {
                     element.classList.remove("is-invalid");
