@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('html101');
+    return view('myview.index');
 });
 
 Route::get('/view2', function () {
@@ -11,4 +11,4 @@ Route::get('/view2', function () {
 });
 
 Route::get('/mycontroller', [App\Http\Controllers\Mycontroller::class, 'index']);
-Route::get('/mycontroller', [App\Http\Controllers\Mycontroller::class, 'process']);
+Route::post('/mycontroller', [App\Http\Controllers\Mycontroller::class, 'store']);
