@@ -12,3 +12,11 @@ Route::get('/view2', function () {
 
 Route::get('/mycontroller', [App\Http\Controllers\Mycontroller::class, 'index']);
 Route::post('/mycontroller', [App\Http\Controllers\Mycontroller::class, 'store']);
+
+
+Route::namespace('App\Http\Controllers')->group(function () {
+     Route::get('/flights', 'FlightController@index');
+     Route::get('/flight/{id}, )
+     Route::post('/flight', 'FlightController@store');
+});
+
