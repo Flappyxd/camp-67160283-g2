@@ -11,7 +11,11 @@
                     <input class="form-control" name="name" id="name">
                 </div>
                 <div class="col-12">
-                    <label for="number_of_planes">Airline</label>
+                    <label for="airline">Airline</label>
+                    <input class="form-control" name="airline" id="airline">
+                </div>
+                <div class="col-12">
+                    <label for="number_of_planes">Number of Planes</label>
                     <input class="form-control" name="number_of_planes" id="number_of_planes">
                 </div>
                 <div class="col-12">
@@ -19,14 +23,10 @@
                     <input class="form-control" name="price_per_ticket" id="price_per_ticket">
                 </div>
                 <div class="col-12">
-                    <button class="btn btn-primary mt-3" type="submit">บันทึก</button>
+                    <button class="btn btn-success" type="submit">บันทึก</button>
                 </div>
             </form>
         </div>
+        @include('flight.table')
     </div>
-    <div class mt-3 col-12>
-        <table class="table">
-            <thead>
-                <tr>
-                    
-
+@endsection
