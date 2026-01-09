@@ -9,28 +9,28 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
-    {
-        Schema::create('pokedexs', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('type');
-            $table->string('species');
-            $table->integer('height');
-            $table->integer('weight');
-            $table->double('hp');
-            $table->double('attack');
-            $table->double('defense');
-            $table->string('image_url');
-            $table->timestamps();
-        });
-    }
+   public function up(): void
+{
+    Schema::create('pokedexes', function (Blueprint $table) {
+        $table->id();
+        $table->string('name');
+        $table->string('type');
+        $table->string('species');
+        $table->integer('height');
+        $table->integer('weight');
+        $table->integer('hp');
+        $table->integer('attack');
+        $table->integer('defense');
+        $table->text('image');
+        $table->timestamps();
+    });
+}
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('pokedexs');
+        Schema::dropIfExists('pokedexes');
     }
 };

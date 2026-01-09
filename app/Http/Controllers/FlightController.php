@@ -28,7 +28,6 @@ class FlightController extends Controller
 
     }
     function index() {
-        echo "Controller";
         $data['flights'] = Flight::all();
         return view('flight.index', $data);
     }
